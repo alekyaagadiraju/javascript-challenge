@@ -21,16 +21,16 @@ function buildTable(data) {
     });
   }
 
-  // Include button function
-  function handleClick() {
+//   // Include button function
+//   function handleClick() {
 
-// Filer data using date
-  var date = d3.select("#datetime").property("value");
-  let filteredData = dataTable;
-  if (date) {
+// // Filer data using date
+//   var date = d3.select("#datetime").property("value");
+//   let filteredData = dataTable
+//   if (date) {
     
-    filteredData = filteredData.filter(row => row.datetime === date);
-  }
+//     filteredData = filteredData.filter(row => row.datetime === date);
+//   }
 
 // Create table w/ filtered data
   buildTable(filteredData);
