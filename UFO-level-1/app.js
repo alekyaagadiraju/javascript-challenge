@@ -5,6 +5,7 @@ var dataTable = data;
 // Table references
 var tbody = d3.select("tbody");
 
+// Begin loading data/ creating table
 function buildTable(data) {
    
     tbody.html("");
@@ -21,25 +22,25 @@ function buildTable(data) {
     });
   }
 
-//   // Include button function
-//   function handleClick() {
+// Include button function
+  function handleClick() {
 
-// // Filer data using date
-//   var date = d3.select("#datetime").property("value");
-//   let filteredData = dataTable
-//   if (date) {
+// Filer data using date
+  var date = d3.select("#datetime").property("value");
+  let filteredData = dataTable
+  if (date) {
     
-//     filteredData = filteredData.filter(row => row.datetime === date);
-//   }
+    filteredData = filteredData.filter(row => row.datetime === date);
+  }
 
 // Create table w/ filtered data
   buildTable(filteredData);
 }
 
-// Attach an event to listen for the form button
+// Filter w/ button click
   d3.selectAll("#filter-btn").on("click", handleClick);
 
-  // Create table
+// Create table
   buildTable(dataTable);
   
 
